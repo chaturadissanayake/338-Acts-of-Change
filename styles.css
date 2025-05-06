@@ -51,15 +51,14 @@ p {
 /* Side-by-side image layout */
 .image-row {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 30px;
   margin-top: 40px;
-  flex-wrap: wrap;
 }
 
 .image-box {
-  width: 300px;
+  flex: 1;
+  max-width: 48%; /* Ensures both images are in the same line and leaves room for gap */
   height: auto;
   border-radius: 6px;
   object-fit: cover;
@@ -92,8 +91,8 @@ footer .credit {
   margin-top: 10px;
 }
 
-/* Responsive */
-@media (max-width: 700px) {
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .image-row {
     flex-direction: column;
     align-items: center;
@@ -101,11 +100,6 @@ footer .credit {
 
   .image-box {
     width: 90%;
-  }
-
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    margin-bottom: 20px; /* Adds space between the stacked images */
   }
 }
