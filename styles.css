@@ -32,12 +32,6 @@ main {
   padding: 40px 20px;
 }
 
-.hero-img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 40px;
-}
-
 h2 {
   font-size: 30px;
   margin-bottom: 24px;
@@ -48,24 +42,23 @@ p {
   margin-bottom: 22px;
   line-height: 1.8;
   letter-spacing: 0.5px;
-  text-align: justify;
+  text-align: left;
   text-justify: inter-word;
 }
 
-/* Side-by-side image layout */
+/* Image layout */
 .image-row {
   display: flex;
-  justify-content: space-between;
-  gap: 30px;
+  justify-content: center;
   margin-top: 40px;
-  flex-wrap: wrap;
+  gap: 40px; /* Space between the two images */
 }
 
 .image-box {
-  width: 48%;
+  width: 48%; /* Keeping the image size appropriate */
   height: auto;
+  object-fit: contain;
   border-radius: 6px;
-  object-fit: cover;
 }
 
 /* Footer */
