@@ -18,32 +18,32 @@
     <h2>338 Acts of Change</h2>
 
     <p>
-      This project is a powerful exploration into how visual communication can bring clarity to complex development data. It presents <strong>338 initiatives</strong> that shaped Sri Lanka in 2024, using a spiral chart to represent a variety of projects aimed at strengthening communities, informing policy, and building resilience. Each dot in the chart represents an individual initiative that has contributed to the nation's sustainable development.
-    </p>
-
-    <p>
-      The project's design was driven by the necessity to bridge the gap between <em>technical reporting</em> and public understanding. In this increasingly data-driven world, transparency and clarity are vital. By transforming complex quantitative data into a cohesive visual representation, this work invites engagement and fosters an understanding of the progress being made in Sri Lanka’s development landscape.
-    </p>
-
-    <p>
-      The data presented comes from the <strong>UN INFO Platform – United Nations in Sri Lanka (2024)</strong>, which categorizes 192 initiatives into key thematic areas: capacity development, service delivery, data analysis, partnerships, policy advice, and more. This breakdown offers a snapshot of the diverse efforts taking place across the country.
-    </p>
-
-    <p>
-      Ultimately, this visual project is more than just about counting the number of initiatives. It's about making <em>development efforts visible and tangible</em> for all stakeholders. The goal was to create a simple yet powerful visual language that prioritizes clarity and hierarchy, while maintaining a sense of fluidity and cohesion in its design.
+      This project is an exploration of how visual communication can provide clarity and insight into complex development data. The project represents <strong>338 initiatives</strong> that shaped Sri Lanka in 2024, illustrated through a spiral chart. Each dot on the chart symbolizes an individual project aimed at strengthening communities, informing policy, and enhancing resilience.
     </p>
 
     <div class="image-row">
-      <img src="Assets/Main 338.jpg" alt="Chart" class="image-box">
+      <img src="Assets/Main 338.jpg" alt="Chart" class="image-box" id="image1" onclick="openImageModal(this.src)">
     </div>
 
     <p>
-      The GIF animation serves to bring a dynamic and interactive element to the project, emphasizing the flow and relationships between the initiatives. It engages the viewer by illustrating how these efforts are interrelated and reinforcing the story told by the chart.
+      The design seeks to bridge the gap between <em>technical data</em> and public understanding. In today’s data-driven world, transparency and accessibility are essential. By transforming raw numbers into a cohesive visual, this project fosters an engaging way to understand Sri Lanka’s development progress.
+    </p>
+
+    <p>
+      The data for this project was sourced from the <strong>UN INFO Platform – United Nations in Sri Lanka (2024)</strong>, categorizing the 192 initiatives into thematic areas such as capacity development, service delivery, policy advice, and more. These themes provide a snapshot of the diverse efforts underway across Sri Lanka to build a more sustainable future.
+    </p>
+
+    <p>
+      Rather than simply presenting a count of initiatives, the goal is to bring these <em>development efforts to life</em>. Through a straightforward visual language, this project prioritizes clarity and structure while maintaining a sense of flow and interconnection across the various initiatives.
     </p>
 
     <div class="image-row">
-      <img src="Assets/338.gif" alt="GIF" class="image-box">
+      <img src="Assets/338.gif" alt="Interactive Animation" class="image-box" id="image2" onclick="openImageModal(this.src)">
     </div>
+
+    <p>
+      The interactive animation adds a dynamic layer to the project, visually illustrating the relationship and progression of initiatives over time. It serves to engage the viewer and animate the chart, making it easier to digest the interconnectivity of Sri Lanka’s development efforts.
+    </p>
   </main>
 
   <footer>
@@ -56,5 +56,23 @@
       <a href="https://github.com/chaturadissanayake">GITHUB</a>
     </div>
   </footer>
+
+  <!-- Modal for enlarged images -->
+  <div id="imageModal" class="modal" onclick="closeImageModal()">
+    <img id="modalImage" class="modal-content" />
+  </div>
+
+  <script>
+    // Function to open the modal
+    function openImageModal(src) {
+      document.getElementById("modalImage").src = src;
+      document.getElementById("imageModal").style.display = "block";
+    }
+
+    // Function to close the modal
+    function closeImageModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
