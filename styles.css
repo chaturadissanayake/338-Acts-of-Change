@@ -1,15 +1,15 @@
-/* Reset and Body */
+/* Base styling */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
-  background-color: #fff;
+  background: #fff;
   color: #111;
   line-height: 1.6;
 }
 
 /* Header */
 header {
-  background-color: #111;
+  background: #111;
   color: white;
   padding: 24px 40px;
   display: flex;
@@ -21,14 +21,14 @@ header {
   font-size: 24px;
 }
 
-.title-block .tagline {
-  margin: 4px 0 0;
+.tagline {
+  margin-top: 4px;
   font-size: 14px;
   color: #ccc;
   line-height: 1.2;
 }
 
-/* Main Content */
+/* Main */
 main {
   max-width: 960px;
   margin: 0 auto;
@@ -44,44 +44,52 @@ main {
 
 h2 {
   font-size: 30px;
-  margin-top: 10px;
   margin-bottom: 24px;
 }
 
 p {
-  margin-bottom: 22px;
   font-size: 16px;
+  margin-bottom: 22px;
 }
 
-/* Chart and GIF Layout */
-.chart-gif-container {
+/* Split layout */
+.split-container {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  align-items: stretch;
   margin-top: 40px;
-  flex-wrap: wrap;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
 }
 
-.chart-gif-container .half {
-  flex: 1 1 48%;
+.left-half,
+.right-half {
+  width: 49%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.chart-gif-container .half img {
+.left-half img,
+.right-half img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 6px;
-  border: 1px solid #ddd;
+}
+
+.divider {
+  width: 2px;
+  background-color: black;
 }
 
 /* Footer */
 footer {
-  background-color: #111;
+  background: #111;
   color: white;
   padding: 40px 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
   font-size: 13px;
 }
@@ -102,14 +110,20 @@ footer .credit {
   margin-top: 10px;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .chart-gif-container {
+  .split-container {
     flex-direction: column;
+    align-items: center;
   }
 
-  .chart-gif-container .half {
-    flex: 1 1 100%;
+  .divider {
+    display: none;
+  }
+
+  .left-half,
+  .right-half {
+    width: 100%;
   }
 
   header {
