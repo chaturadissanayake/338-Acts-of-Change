@@ -47,19 +47,34 @@ p {
 }
 
 /* Image layout */
-.image-row {
+.chart-container {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
 
 .image-box {
-  width: 90%;
+  width: 100%;
   height: auto;
+  max-width: 960px; /* Make sure it doesn't exceed the paragraph width */
   object-fit: contain;
   border-radius: 6px;
   cursor: pointer;
-  margin-bottom: 40px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.image-box {
+  width: 48%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 /* Footer */
@@ -121,6 +136,10 @@ footer .credit {
     width: 90%;
     margin-bottom: 20px;
   }
+
+  .chart-container {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -130,6 +149,6 @@ footer .credit {
   }
 
   .image-box {
-    width: 80%; /* Adjust width for larger screen */
+    width: 48%; /* Adjust width to make sure the images sit side by side */
   }
 }
