@@ -54,7 +54,7 @@ p {
 }
 
 .image-box {
-  width: 80%;
+  width: 90%;
   height: auto;
   object-fit: contain;
   border-radius: 6px;
@@ -130,6 +130,6 @@ footer .credit {
   }
 
   .image-box {
-    width: 60%;
+    width: 80%; /* Adjust width for larger screen */
   }
 }
