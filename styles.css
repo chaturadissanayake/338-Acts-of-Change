@@ -58,12 +58,11 @@ p {
   justify-content: space-between;
   gap: 30px;
   margin-top: 40px;
-  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  flex-wrap: wrap;
 }
 
 .image-box {
-  flex: 1;
-  max-width: 48%; /* Ensure both images are side by side */
+  width: 48%;
   height: auto;
   border-radius: 6px;
   object-fit: cover;
@@ -106,5 +105,16 @@ footer .credit {
   .image-box {
     width: 90%;
     margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-row {
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .image-box {
+    width: 48%; /* Adjust width to make sure the images sit side by side */
   }
 }
