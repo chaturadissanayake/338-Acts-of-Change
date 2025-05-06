@@ -48,7 +48,7 @@ p {
   margin-bottom: 22px;
   line-height: 1.8;
   letter-spacing: 0.5px;
-  text-align: justify;
+  text-align: left; /* Align text to left */
 }
 
 a {
@@ -62,7 +62,7 @@ a:hover {
 
 .image-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center images */
   gap: 30px;
   margin-top: 40px;
 }
@@ -87,7 +87,7 @@ a:hover {
 }
 
 .author {
-  text-align: center;
+  text-align: left;
   font-size: 14px;
   color: #777;
   opacity: 0.5;
