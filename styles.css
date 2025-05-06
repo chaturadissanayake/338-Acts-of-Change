@@ -25,7 +25,7 @@ header {
   color: #ccc;
 }
 
-/* Main */
+/* Main Content */
 main {
   max-width: 960px;
   margin: 0 auto;
@@ -46,6 +46,10 @@ h2 {
 p {
   font-size: 16px;
   margin-bottom: 22px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* Side-by-side image layout */
@@ -54,11 +58,12 @@ p {
   justify-content: space-between;
   gap: 30px;
   margin-top: 40px;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
 .image-box {
   flex: 1;
-  max-width: 48%; /* Ensures both images are in the same line and leaves room for gap */
+  max-width: 48%; /* Ensure both images are side by side */
   height: auto;
   border-radius: 6px;
   object-fit: cover;
@@ -100,6 +105,6 @@ footer .credit {
 
   .image-box {
     width: 90%;
-    margin-bottom: 20px; /* Adds space between the stacked images */
+    margin-bottom: 20px;
   }
 }
