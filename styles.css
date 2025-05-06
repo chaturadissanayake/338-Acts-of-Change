@@ -46,6 +46,15 @@ p {
   text-align: justify;
 }
 
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .image-row {
   display: flex;
   justify-content: space-between;
@@ -72,6 +81,15 @@ p {
   margin-top: 10px;
 }
 
+.author {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  opacity: 0.5;
+  margin-top: 40px;
+}
+
+/* Footer */
 footer {
   background: #111;
   color: white;
