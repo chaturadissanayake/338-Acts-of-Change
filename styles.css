@@ -1,51 +1,50 @@
-/* General Reset & Body */
+/* Reset and Body */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
-  background: #fff;
+  background-color: #fff;
   color: #111;
   line-height: 1.6;
 }
 
 /* Header */
 header {
-  background: #111;
+  background-color: #111;
   color: white;
-  padding: 20px 40px;
+  padding: 24px 40px;
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
 }
 
-header h1 {
-  font-size: 26px;
+.title-block h1 {
   margin: 0;
+  font-size: 24px;
 }
 
-.tagline {
+.title-block .tagline {
+  margin: 4px 0 0;
   font-size: 14px;
-  margin-top: 4px;
   color: #ccc;
   line-height: 1.2;
 }
 
-/* Main Layout */
+/* Main Content */
 main {
+  max-width: 960px;
+  margin: 0 auto;
   padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
 }
 
 .hero-img {
   width: 100%;
   height: auto;
-  display: block;
   margin-bottom: 40px;
+  border-radius: 6px;
 }
 
 h2 {
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 24px;
 }
 
@@ -54,44 +53,44 @@ p {
   font-size: 16px;
 }
 
-/* Chart & GIF Section */
+/* Chart and GIF Layout */
 .chart-gif-container {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   gap: 20px;
   margin-top: 40px;
   flex-wrap: wrap;
 }
 
-.half {
+.chart-gif-container .half {
   flex: 1 1 48%;
 }
 
-.half img {
+.chart-gif-container .half img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 6px;
   border: 1px solid #ddd;
-  border-radius: 4px;
 }
 
 /* Footer */
 footer {
-  background: #111;
+  background-color: #111;
   color: white;
   padding: 40px 20px;
-  font-size: 13px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  font-size: 13px;
 }
 
 footer a {
   color: white;
   text-decoration: none;
-  margin-right: 15px;
-  letter-spacing: 2px;
+  margin-right: 16px;
+  letter-spacing: 1px;
 }
 
 footer .socials {
@@ -99,24 +98,27 @@ footer .socials {
   flex-wrap: wrap;
 }
 
-/* Responsive Design */
+footer .credit {
+  margin-top: 10px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .chart-gif-container {
     flex-direction: column;
   }
 
-  .half {
+  .chart-gif-container .half {
     flex: 1 1 100%;
   }
 
   header {
     flex-direction: column;
-    align-items: flex-start;
   }
 
   footer {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
   }
 }
