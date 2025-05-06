@@ -16,7 +16,7 @@ header {
 
 .title-block h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .tagline {
@@ -35,6 +35,11 @@ main {
 h2 {
   font-size: 30px;
   margin-bottom: 24px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 24px;
 }
 
 p {
