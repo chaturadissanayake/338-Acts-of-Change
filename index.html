@@ -22,7 +22,7 @@
     </p>
 
     <p>
-      At the heart of this project is a visual chart that breaks down 338 initiatives—each representing a tangible effort to uplift communities, strengthen policy, and build resilience. These 338 dots in the chart are more than just data points; they represent real people, real changes, and real progress. <a href="https://www.undp.org/sri-lanka">UNDP Sri Lanka</a> has been a key partner in enabling these transformations.
+      At the heart of this project is a visual chart that breaks down 338 initiatives—each representing a tangible effort to uplift communities, strengthen policy, and build resilience. These 338 dots in the chart are more than just data points; they represent real people, real changes, and real progress. <a href="https://www.undp.org/srilanka">UNDP Sri Lanka</a> has been a key partner in enabling these transformations.
     </p>
 
     <p>
@@ -31,8 +31,8 @@
 
     <div class="image-row">
       <div class="image-container">
-        <img src="Assets/Main 338.jpg" alt="Chart" class="image-box" />
-        <p class="click-to-enlarge">Click to Enlarge</p>
+        <img src="Assets/Main 338.jpg" alt="Chart" class="image-box" id="image1" />
+        <p class="click-to-enlarge" onclick="enlargeImage('image1')">Click to Enlarge</p>
       </div>
     </div>
 
@@ -46,8 +46,8 @@
 
     <div class="image-row">
       <div class="image-container">
-        <img src="Assets/338.gif" alt="Animated Graphic" class="image-box" />
-        <p class="click-to-enlarge">Click to Enlarge</p>
+        <img src="Assets/338.gif" alt="Animated Graphic" class="image-box" id="image2" />
+        <p class="click-to-enlarge" onclick="enlargeImage('image2')">Click to Enlarge</p>
       </div>
     </div>
 
@@ -80,6 +80,38 @@
       <a href="https://github.com/chaturadissanayake">Powered by GitHub</a>
     </div>
   </footer>
+
+  <script>
+    function enlargeImage(id) {
+      const img = document.getElementById(id);
+      const imgSrc = img.src;
+      const overlay = document.createElement('div');
+      overlay.style.position = 'fixed';
+      overlay.style.top = 0;
+      overlay.style.left = 0;
+      overlay.style.width = '100%';
+      overlay.style.height = '100%';
+      overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+      overlay.style.zIndex = 9999;
+
+      const enlargedImg = document.createElement('img');
+      enlargedImg.src = imgSrc;
+      enlargedImg.style.position = 'absolute';
+      enlargedImg.style.top = '50%';
+      enlargedImg.style.left = '50%';
+      enlargedImg.style.transform = 'translate(-50%, -50%)';
+      enlargedImg.style.maxWidth = '90%';
+      enlargedImg.style.maxHeight = '90%';
+      enlargedImg.style.objectFit = 'contain';
+
+      overlay.appendChild(enlargedImg);
+      document.body.appendChild(overlay);
+
+      overlay.onclick = function () {
+        document.body.removeChild(overlay);
+      };
+    }
+  </script>
 
 </body>
 </html>
