@@ -15,6 +15,17 @@ body {
   line-height: 1.7;
 }
 
+/* Scroll Progress */
+#progress-bar {
+  height: 4px;
+  background: var(--hover-color);
+  width: 0%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
 /* Sticky Header */
 .header {
   display: flex;
@@ -24,7 +35,7 @@ body {
   flex-wrap: wrap;
   background: #fff;
   position: sticky;
-  top: 0;
+  top: 4px;
   z-index: 1000;
   border-bottom: 1px solid #eee;
 }
@@ -93,18 +104,15 @@ body {
 /* Images */
 .image-row {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 40px 0 10px;
-}
-
-.image-container {
-  text-align: left;
-  max-width: 600px;
 }
 
 .image-box {
   max-width: 100%;
-  height: auto;
+  max-height: 600px;
+  border-radius: 4px;
 }
 
 .click-to-enlarge {
@@ -112,6 +120,8 @@ body {
   color: var(--hover-color);
   margin-top: 8px;
   cursor: pointer;
+  text-align: left;
+  align-self: flex-start;
 }
 
 /* Footer */
@@ -145,6 +155,22 @@ body {
   margin-left: auto;
 }
 
+/* Back to Top */
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 1000;
+  font-size: 20px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: var(--hover-color);
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header {
@@ -173,5 +199,10 @@ body {
   .socials-right {
     margin-top: 10px;
     justify-content: center;
+  }
+
+  .click-to-enlarge {
+    text-align: center;
+    align-self: center;
   }
 }
