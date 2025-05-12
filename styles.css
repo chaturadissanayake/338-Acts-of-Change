@@ -24,7 +24,6 @@ body {
   line-height: 1.7;
 }
 
-/* Progress Bar */
 #progress-bar {
   height: 4px;
   background: var(--hover-color);
@@ -35,7 +34,6 @@ body {
   z-index: 2000;
 }
 
-/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -82,10 +80,8 @@ body {
   text-transform: uppercase;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
+.nav-links a:hover {
   color: var(--hover-color);
-  text-decoration: none;
 }
 
 .nav-toggle {
@@ -96,7 +92,6 @@ body {
   cursor: pointer;
 }
 
-/* Main */
 .main-content {
   max-width: 960px;
   margin: auto;
@@ -134,7 +129,7 @@ body {
   margin: 40px 0 15px;
 }
 
-/* Images */
+/* Image */
 .image-row {
   display: flex;
   flex-direction: column;
@@ -143,7 +138,7 @@ body {
 }
 
 .image-box {
-  max-width: 720px;
+  max-width: 700px;
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -177,23 +172,24 @@ body {
 
 .modal-content {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 90vw;
+  max-height: 90vh;
 }
 
 .modal-content img {
   width: 100%;
   height: auto;
   border-radius: 6px;
+  object-fit: contain;
 }
 
 #modal-close {
   position: absolute;
-  top: -20px;
-  right: -20px;
+  top: -16px;
+  right: -16px;
   width: 36px;
   height: 36px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   background: white;
   color: #111;
@@ -239,7 +235,7 @@ body {
 /* Back to Top */
 #back-to-top {
   position: fixed;
-  bottom: 100px;
+  bottom: 110px;
   right: 30px;
   z-index: 1000;
   font-size: 20px;
@@ -252,7 +248,7 @@ body {
   cursor: pointer;
 }
 
-/* Tag Pills */
+/* Tags */
 .tag-pills {
   display: flex;
   flex-wrap: wrap;
@@ -268,7 +264,7 @@ body {
   color: var(--text-dark);
 }
 
-/* Response Section */
+/* Responses */
 .responses {
   margin: 40px 0;
   border-top: 1px solid #eee;
@@ -283,10 +279,17 @@ body {
 
 .engagement-icons {
   display: flex;
-  gap: 16px;
-  font-size: 16px;
-  color: #999;
+  gap: 20px;
+  font-size: 18px;
+  color: #444;
   margin-bottom: 20px;
+}
+
+.engagement-icons span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
 }
 
 .comment-box {
@@ -306,13 +309,7 @@ body {
   outline: none;
 }
 
-.comment-box .avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-
-/* Focus Styles */
+/* Focus styles */
 a:focus,
 button:focus,
 input:focus {
@@ -359,45 +356,20 @@ input:focus {
   }
 
   .click-to-enlarge {
-    text-align: center;
     align-self: center;
+    text-align: center;
   }
 
   .image-box {
     max-width: 95%;
   }
 
-  #back-to-top {
-    bottom: 120px;
-  }
-
   #modal-close {
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
-    font-size: 20px;
-  }
-}
-
-/* Print Styles */
-@media print {
-  .header, .footer, #back-to-top, #progress-bar, #img-modal, .responses, .tag-pills {
-    display: none !important;
+    top: -18px;
+    right: -18px;
   }
 
-  body {
-    color: black;
-    background: white;
-    font-size: 14pt;
-  }
-
-  .main-content {
-    padding: 0;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto !important;
+  #back-to-top {
+    bottom: 140px;
   }
 }
