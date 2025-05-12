@@ -15,13 +15,17 @@ body {
   line-height: 1.7;
 }
 
-/* Header */
+/* Sticky Header */
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 24px 40px;
+  align-items: flex-start;
+  padding: 16px 40px;
   flex-wrap: wrap;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   border-bottom: 1px solid #eee;
 }
 
@@ -84,9 +88,9 @@ body {
 }
 
 .article-author {
-  font-size: 14px;
-  color: #555;
-  margin-top: 40px;
+  font-size: 13px;
+  color: #888;
+  margin-top: 25px;
   text-align: left;
 }
 
@@ -150,6 +154,7 @@ body {
   .header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 20px;
   }
 
   .header-right {
@@ -162,15 +167,4 @@ body {
     padding: 30px 16px;
   }
 
-  .footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .socials-left,
-  .socials-right {
-    margin-top: 10px;
-    justify-content: center;
-  }
-}
+  .
