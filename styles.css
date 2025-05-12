@@ -1,6 +1,5 @@
 :root {
   --hover-color: #007e7e;
-  --light-gray: #f4f4f4;
 }
 
 * {
@@ -11,7 +10,7 @@
 
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  background: white;
+  background: #fff;
   color: #111;
   line-height: 1.7;
 }
@@ -20,10 +19,10 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 25px 40px;
-  background: white;
+  align-items: center;
+  padding: 24px 40px;
   flex-wrap: wrap;
+  border-bottom: 1px solid #eee;
 }
 
 .author-meta {
@@ -40,7 +39,6 @@ body {
 .author-role {
   font-size: 13px;
   color: #777;
-  margin-top: 4px;
 }
 
 .header-right a {
@@ -71,15 +69,13 @@ body {
 .subtitle {
   font-size: 16px;
   color: #666;
-  max-width: 700px;
-  line-height: 1.6;
   margin-bottom: 36px;
+  max-width: 700px;
 }
 
 .article-section p {
   font-size: 16px;
   margin-bottom: 25px;
-  line-height: 1.8;
 }
 
 .article-section h3 {
@@ -87,19 +83,11 @@ body {
   margin: 40px 0 15px;
 }
 
-ul {
-  padding-left: 20px;
-  margin-bottom: 25px;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #0056b3;
-  text-decoration: none;
+.article-author {
+  font-size: 14px;
+  color: #555;
+  margin-top: 40px;
+  text-align: left;
 }
 
 /* Images */
@@ -111,6 +99,7 @@ a:hover {
 
 .image-container {
   text-align: left;
+  max-width: 600px;
 }
 
 .image-box {
@@ -127,30 +116,29 @@ a:hover {
 
 /* Footer */
 .footer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 30px 40px;
   background: #111;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+  flex-wrap: wrap;
 }
 
 .footer a {
   color: white;
+  text-decoration: none;
   margin-right: 16px;
   font-size: 14px;
-  text-decoration: none;
 }
 
 .footer a:hover {
   color: var(--hover-color);
-  text-decoration: none;
 }
 
-.socials-left,
-.socials-right {
+.socials-left {
   display: flex;
-  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .socials-right {
@@ -160,7 +148,6 @@ a:hover {
 /* Responsive */
 @media (max-width: 768px) {
   .header {
-    padding: 20px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -183,7 +170,7 @@ a:hover {
 
   .socials-left,
   .socials-right {
-    justify-content: center;
     margin-top: 10px;
+    justify-content: center;
   }
 }
