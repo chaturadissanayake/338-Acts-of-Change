@@ -24,6 +24,7 @@ body {
   line-height: 1.7;
 }
 
+/* Progress Bar */
 #progress-bar {
   height: 4px;
   background: var(--hover-color);
@@ -34,6 +35,7 @@ body {
   z-index: 2000;
 }
 
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -92,6 +94,7 @@ body {
   cursor: pointer;
 }
 
+/* Main Content */
 .main-content {
   max-width: 960px;
   margin: auto;
@@ -129,7 +132,7 @@ body {
   margin: 40px 0 15px;
 }
 
-/* Image */
+/* Images */
 .image-row {
   display: flex;
   flex-direction: column;
@@ -248,7 +251,7 @@ body {
   cursor: pointer;
 }
 
-/* Tags */
+/* Tag Pills */
 .tag-pills {
   display: flex;
   flex-wrap: wrap;
@@ -309,7 +312,7 @@ body {
   outline: none;
 }
 
-/* Focus styles */
+/* Focus Styles */
 a:focus,
 button:focus,
 input:focus {
@@ -317,7 +320,7 @@ input:focus {
   outline-offset: 4px;
 }
 
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
