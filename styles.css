@@ -1,69 +1,99 @@
-/* Reset & base */
-* {
+/* Layout */
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
   font-family: 'Helvetica Neue', sans-serif;
-  background: #fff;
-  color: #111;
-  line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
-img {
-  max-width: 100%;
+.layout {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.name-block {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.name {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  color: #222;
+  text-decoration: none;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.name:hover {
+  color: red;
+}
+
+.name-divider {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: #999;
+  margin: 8px 0;
+}
+
+.designation {
+  font-size: 14px;
+  color: #555;
+  max-width: 200px;
+}
+
+.nav-links a {
   display: block;
+  font-size: 13px;
+  text-decoration: none;
+  color: #666;
+  text-transform: uppercase;
+  margin-top: 12px;
 }
 
-/* Header */
-header {
-  background: #111;
-  color: white;
-  padding: 24px 20px;
-}
-
-.title-block {
-  max-width: 960px;
+/* Main */
+.main-content {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1000px;
   margin: auto;
 }
 
 .title-block h1 {
-  font-size: 2rem;
-  line-height: 1.3;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 .tagline {
-  margin-top: 6px;
-  font-size: 1.2rem;
-  color: #ccc;
-}
-
-/* Main Content */
-main {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
 }
 
 h2 {
-  font-size: 28px;
-  margin-bottom: 24px;
+  font-size: 24px;
+  margin: 40px 0 20px;
 }
 
 h3 {
-  font-size: 22px;
-  margin-top: 40px;
-  margin-bottom: 18px;
+  font-size: 20px;
+  margin: 30px 0 10px;
 }
 
 p {
-  font-size: 16px;
-  margin-bottom: 22px;
+  font-size: 15px;
   line-height: 1.8;
-  letter-spacing: 0.3px;
+  margin-bottom: 22px;
 }
 
 a {
@@ -75,125 +105,59 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Image display */
 .image-row {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-}
-
-.image-container {
   text-align: center;
-  width: 100%;
+  margin: 40px 0;
 }
 
 .image-box {
-  width: 100%;
   max-width: 500px;
+  width: 100%;
   height: auto;
-  border-radius: 6px;
-  object-fit: cover;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
 .click-to-enlarge {
   font-size: 14px;
-  color: #007bff;
+  color: #0056b3;
   cursor: pointer;
   margin-top: 10px;
-  display: inline-block;
 }
 
-/* Author */
 .author {
-  text-align: left;
-  font-size: 14px;
-  color: #777;
-  opacity: 0.7;
-  margin-top: 40px;
+  font-size: 13px;
+  color: #888;
+  margin-top: 50px;
 }
 
 /* Footer */
 footer {
-  background: #111;
-  color: white;
-  padding: 20px;
+  margin-top: 50px;
 }
 
-footer .socials, footer .credit {
+.socials {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-footer .socials a,
-footer .credit a {
-  color: white;
-  text-decoration: none;
-  margin-right: 16px;
-  letter-spacing: 1px;
-  font-size: 14px;
-}
-
-footer .container {
-  max-width: 960px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
+  font-size: 13px;
 }
 
-footer .socials a:hover,
-footer .credit a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
-  .title-block h1 {
-    font-size: 1.5rem;
-  }
-
-  .tagline {
-    font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  h3 {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 15px;
-  }
-
-  .image-box {
-    max-width: 90%;
-    margin-bottom: 20px;
-  }
-
-  .image-row {
+  .layout {
     flex-direction: column;
-    align-items: center;
   }
 
-  footer .container {
-    flex-direction: column;
-    align-items: center;
+  .sidebar {
+    width: 100%;
     text-align: center;
+    padding: 20px;
   }
 
-  footer .socials, footer .credit {
+  .main-content {
+    padding: 20px;
+  }
+
+  .socials {
     justify-content: center;
-  }
-
-  footer .credit {
-    margin-top: 12px;
   }
 }
