@@ -12,26 +12,27 @@
   <meta name="twitter:title" content="338 Acts of Change – Shaping Sri Lanka" />
   <meta name="twitter:description" content="A data-driven story of 338 development projects transforming Sri Lanka in 2024." />
   <meta name="twitter:image" content="Assets/Main 338.jpg" />
+  <link rel="icon" type="image/png" href="Assets/favicon.png" />
   <title>338 Acts of Change – Shaping Sri Lanka</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Scroll Progress Bar -->
   <div id="progress-bar"></div>
 
-  <!-- Header -->
   <header class="header">
     <div class="author-meta">
       <span class="author-name">Chatura Dissanayake</span>
       <span class="author-role">Communications & Data Visualization Designer</span>
     </div>
     <nav class="header-right">
-      <a href="#">About</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links">
+        <a href="#">About</a>
+      </div>
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main class="main-content">
     <section class="title-block">
       <h1>338 Acts of Change – Shaping Sri Lanka</h1>
@@ -42,34 +43,47 @@
     </section>
 
     <article class="article-section">
-      <p>In 2024, Sri Lanka's development journey was not defined by a single transformation, but by hundreds of interconnected efforts across the island...</p>
+      <p>In 2024, Sri Lanka's development journey was not defined by a single transformation, but by hundreds of interconnected efforts across the island. <strong>338 Acts of Change</strong> is more than a number—it's a lens into the scale, diversity, and ambition of initiatives designed to uplift communities, inform national policy, and promote long-term resilience. Each 338 dots in the spiral chart represents one such initiative: a focused attempt to respond to a challenge or create new opportunities for people across the country.</p>
+
+      <p>The inspiration behind this visualisation was not just to display data, but to tell a story. A story of how change is often quiet, local, and incremental—and how, when woven together, it forms a larger narrative of progress. The spiral chart featured in this project captures that complexity in a way that's visually engaging and easy to explore.</p>
 
       <figure class="image-row">
         <img src="Assets/Main 338.jpg" alt="Spiral chart showing 338 initiatives by category" class="image-box" id="image1" loading="lazy" onerror="this.src='fallback.jpg';" />
         <figcaption class="click-to-enlarge" data-img="image1">Click to Enlarge</figcaption>
       </figure>
 
-      <p>With nearly half of all projects focusing on capacity development...</p>
+      <p>With nearly half of all projects focusing on capacity development, it's clear that most investments in 2024 were about strengthening institutions and systems. These ranged from improving disaster response infrastructure, training local government officials, and modernising administrative workflows. Capacity is the silent engine of development—it enables all other efforts to succeed by ensuring that institutions are resilient, responsive, and ready to act.</p>
 
-      <p>Equally critical was the role of data. 37 projects focused on data and analysis...</p>
+      <p>But building capacity alone isn't enough. Development also thrives on collaboration. That's where the 47 initiatives focused on partnerships and knowledge-sharing played a transformative role. These programs created safe spaces for dialogue between civil society, academia, policymakers, and communities. They moved beyond one-way communication and embraced co-creation, giving stakeholders ownership of the outcomes and building trust across divides.</p>
+
+      <p>Policy advice made up another major theme. With 35 projects focused on providing technical assistance and guidance, these efforts helped shape the policies that underpin national planning. Whether supporting legal frameworks on gender equity or advising on climate finance structures, this work ensured that decisions were grounded in evidence and experience.</p>
+
+      <p>Equally critical was the role of data. 37 projects focused on data and analysis in a world overflowing with information. These ranged from impact assessments and mapping exercises to developing real-time dashboards. Many of these tools became the backbone for monitoring and evaluation, helping implementers refine their strategies and prioritise resources more effectively.</p>
 
       <figure class="image-row">
         <img src="Assets/338.gif" alt="Animated breakdown of initiatives by development category" class="image-box" id="image2" loading="lazy" onerror="this.src='fallback.jpg';" />
         <figcaption class="click-to-enlarge" data-img="image2">Click to Enlarge</figcaption>
       </figure>
 
+      <p>Behind the scenes, 13 support function projects strengthened the operational core—logistics, procurement systems, coordination platforms—ensuring everything else could function without friction. They may not grab headlines but are essential for delivery and cost-effectiveness.</p>
+
+      <p>At the frontlines, 53 service delivery projects made a tangible impact. These initiatives provided vocational training, health clinics, mental health services, social protection tools, and access to essential services like clean water or identity documentation. Many prioritised hard-to-reach populations and worked toward inclusive, equitable access.</p>
+
+      <p>Lastly, 17 coordination and "other" projects provided flexibility and cross-sectoral innovation. They launched pilots, responded to emergencies, and created new mechanisms for inter-agency response. These acted like connective tissue, bringing different work streams together and amplifying the overall impact.</p>
+
       <h3>Tools Used</h3>
       <p>This project was created using Adobe Illustrator, Photoshop, Canva, Flourish, HTML, and CSS.</p>
 
       <h3>Additional Insights</h3>
-      <p>Two years into the UN Sustainable Development Cooperation Framework (2023–2027)...</p>
+      <p>Two years into the UN Sustainable Development Cooperation Framework (2023–2027), the United Nations has continued to deliver tangible results across multiple sectors in Sri Lanka. This includes action in health, food security, social protection, economic recovery, climate adaptation, governance, social cohesion, and gender equality. In 2024 alone, the UN mobilised over USD 80 million to support impactful programming, strengthen institutions, and empower vulnerable communities.</p>
+
+      <p>For more insights, explore the <a href="https://srilanka.un.org/en/293540-un-sri-lanka-2024-annual-results-report" target="_blank">2024 Annual Results Report</a>, which details the full scope of interventions and achievements across Sri Lanka.</p>
 
       <h3>Closing Note</h3>
-      <p><strong>338 Acts of Change</strong> reminds us that development isn't always loud or immediate...</p>
+      <p><strong>338 Acts of Change</strong> reminds us that development isn't always loud or immediate. Sometimes, the accumulation of small, deliberate actions leads to the most lasting impact. Each dot in this spiral carries a story of collaboration, hope, resilience, and vision for a better future.</p>
     </article>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="socials-left">
       <a href="https://www.instagram.com/chaturadissanayake/" target="_blank">Instagram</a>
@@ -83,11 +97,10 @@
 
   <button id="back-to-top" title="Go to top">↑</button>
 
-  <!-- Enlarged Modal -->
   <div id="img-modal" role="dialog" aria-modal="true" hidden>
     <div class="modal-content">
       <span id="modal-close" title="Close">×</span>
-      <img id="modal-img" src="" alt="Enlarged" />
+      <img id="modal-img" src="" alt="Enlarged view" />
     </div>
   </div>
 
@@ -119,17 +132,19 @@
       }
     });
 
-    // Scroll progress
     window.onscroll = function () {
       const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
       document.getElementById("progress-bar").style.width = scrolled + "%";
-
-      const btn = document.getElementById("back-to-top");
-      btn.style.display = window.scrollY > 300 ? "block" : "none";
+      document.getElementById("back-to-top").style.display = window.scrollY > 300 ? "block" : "none";
     };
 
     document.getElementById("back-to-top").onclick = () =>
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Toggle navigation (future use)
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
   </script>
 </body>
 </html>
