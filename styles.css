@@ -1,5 +1,6 @@
 :root {
   --hover-color: #007e7e;
+  --light-gray: #f4f4f4;
 }
 
 * {
@@ -8,9 +9,9 @@
   box-sizing: border-box;
 }
 
-body, html {
+body {
   font-family: 'Helvetica Neue', sans-serif;
-  background: #fff;
+  background: white;
   color: #111;
   line-height: 1.7;
 }
@@ -19,23 +20,27 @@ body, html {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 25px 40px;
-  border-bottom: 1px solid #eee;
+  background: white;
   flex-wrap: wrap;
 }
 
-.header-left .name {
+.author-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
   font-size: 18px;
   font-weight: bold;
   color: #111;
-  text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-.header-left .name:hover {
-  color: var(--hover-color);
-  text-decoration: none;
+.author-role {
+  font-size: 13px;
+  color: #777;
+  margin-top: 4px;
 }
 
 .header-right a {
@@ -71,7 +76,6 @@ body, html {
   margin-bottom: 36px;
 }
 
-/* Article Section */
 .article-section p {
   font-size: 16px;
   margin-bottom: 25px;
@@ -81,6 +85,11 @@ body, html {
 .article-section h3 {
   font-size: 20px;
   margin: 40px 0 15px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 25px;
 }
 
 a {
@@ -116,44 +125,44 @@ a:hover {
   cursor: pointer;
 }
 
-/* Author */
-.author-line {
-  font-size: 13px;
-  color: #555;
-  margin-top: 40px;
-}
-
-/* Social Footer */
-.social-footer {
-  padding: 30px 20px;
-  background: #fff;
-  border-top: 1px solid #eee;
-  text-align: center;
-}
-
-.socials {
+/* Footer */
+.footer {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
   flex-wrap: wrap;
+  padding: 30px 40px;
+  background: #111;
+  color: white;
 }
 
-.socials a {
+.footer a {
+  color: white;
+  margin-right: 16px;
   font-size: 14px;
-  color: #111;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-.socials a:hover {
+.footer a:hover {
   color: var(--hover-color);
   text-decoration: none;
+}
+
+.socials-left,
+.socials-right {
+  display: flex;
+  align-items: center;
+}
+
+.socials-right {
+  margin-left: auto;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .header {
     padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .header-right {
@@ -166,17 +175,15 @@ a:hover {
     padding: 30px 16px;
   }
 
-  .title-block h1 {
-    font-size: 26px;
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .subtitle {
-    font-size: 15px;
-    margin-bottom: 30px;
-  }
-
-  .author-line {
-    text-align: left;
-    font-size: 12px;
+  .socials-left,
+  .socials-right {
+    justify-content: center;
+    margin-top: 10px;
   }
 }
