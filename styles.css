@@ -1,5 +1,9 @@
 :root {
   --hover-color: #007e7e;
+  --bg-light: #fff;
+  --bg-dark: #111;
+  --text-dark: #111;
+  --text-muted: #777;
 }
 
 * {
@@ -10,12 +14,12 @@
 
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  background: #fff;
-  color: #111;
+  background: var(--bg-light);
+  color: var(--text-dark);
   line-height: 1.7;
 }
 
-/* Scroll Progress */
+/* Progress Bar */
 #progress-bar {
   height: 4px;
   background: var(--hover-color);
@@ -33,7 +37,7 @@ body {
   align-items: flex-start;
   padding: 16px 40px;
   flex-wrap: wrap;
-  background: #fff;
+  background: var(--bg-light);
   position: sticky;
   top: 4px;
   z-index: 1000;
@@ -48,17 +52,17 @@ body {
 .author-name {
   font-size: 18px;
   font-weight: bold;
-  color: #111;
+  color: var(--text-dark);
 }
 
 .author-role {
   font-size: 13px;
-  color: #777;
+  color: var(--text-muted);
 }
 
 .header-right a {
   font-size: 14px;
-  color: #111;
+  color: var(--text-dark);
   text-decoration: none;
   text-transform: uppercase;
   margin-left: 20px;
@@ -87,8 +91,14 @@ body {
   font-weight: 400;
   color: #555;
   line-height: 1.5;
-  margin-bottom: 36px;
+  margin-bottom: 16px;
   max-width: 700px;
+}
+
+.meta-info {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 40px;
 }
 
 .article-section p {
@@ -111,6 +121,7 @@ body {
 
 .image-box {
   max-width: 100%;
+  width: 100%;
   max-height: 600px;
   border-radius: 4px;
 }
@@ -120,13 +131,12 @@ body {
   color: var(--hover-color);
   margin-top: 8px;
   cursor: pointer;
-  text-align: left;
   align-self: flex-start;
 }
 
 /* Footer */
 .footer {
-  background: #111;
+  background: var(--bg-dark);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -171,6 +181,48 @@ body {
   cursor: pointer;
 }
 
+/* Modal Viewer */
+#img-modal {
+  position: fixed;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#img-modal[hidden] {
+  display: none;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+#modal-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  font-size: 30px;
+  background: #fff;
+  color: #111;
+  border-radius: 100%;
+  padding: 2px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header {
@@ -204,5 +256,9 @@ body {
   .click-to-enlarge {
     text-align: center;
     align-self: center;
+  }
+
+  .image-box {
+    max-width: 95%;
   }
 }
