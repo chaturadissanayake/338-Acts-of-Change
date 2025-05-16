@@ -354,3 +354,24 @@ blockquote {
     bottom: 140px;
   }
 }
+
+.image-row.side-by-side {
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 48%;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    max-width: 100%;
+  }
+}
+
