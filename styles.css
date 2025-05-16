@@ -105,7 +105,8 @@ body.modal-open {
   padding: 40px 20px;
 }
 
-.title-block h1 {
+.title-block h1,
+.about-title h1 {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -136,7 +137,6 @@ body.modal-open {
   margin: 40px 0 15px;
 }
 
-/* Paragraph link style only */
 .article-section p a {
   color: inherit;
   text-decoration: none;
@@ -147,6 +147,15 @@ body.modal-open {
 .article-section p a:hover {
   border-color: var(--hover-color);
   color: var(--hover-color);
+}
+
+/* Blockquote for About page */
+blockquote {
+  font-style: italic;
+  color: var(--text-muted);
+  border-left: 4px solid #ccc;
+  padding-left: 16px;
+  margin: 20px 0;
 }
 
 /* Images */
@@ -176,10 +185,11 @@ body.modal-open {
 /* Modal */
 #img-modal {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   z-index: 2000;
   display: flex;
   justify-content: center;
@@ -219,7 +229,7 @@ body.modal-open {
   text-align: center;
   cursor: pointer;
   border: none;
-  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   outline: none;
 }
 
