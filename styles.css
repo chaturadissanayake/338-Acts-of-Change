@@ -132,6 +132,13 @@ body.modal-open {
   margin-bottom: 25px;
 }
 
+.article-section h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 50px 0 20px;
+  color: var(--text-dark);
+}
+
 .article-section h3 {
   font-size: 20px;
   margin: 40px 0 15px;
@@ -149,21 +156,22 @@ body.modal-open {
   color: var(--hover-color);
 }
 
-/* Blockquote for About page */
+/* Blockquotes */
 blockquote {
   font-style: italic;
   color: var(--text-muted);
   border-left: 4px solid #ccc;
   padding-left: 16px;
   margin: 20px 0;
+  font-size: 16px;
 }
 
-/* Images */
+/* Image Section (Gallery) */
 .image-row {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px 0 10px;
+  margin: 40px 0 20px;
 }
 
 .image-box {
@@ -171,7 +179,13 @@ blockquote {
   width: 100%;
   height: auto;
   object-fit: contain;
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover {
+  transform: scale(1.02);
 }
 
 .click-to-enlarge {
@@ -180,6 +194,7 @@ blockquote {
   margin-top: 8px;
   cursor: pointer;
   align-self: flex-start;
+  padding-left: 10px;
 }
 
 /* Modal */
@@ -233,10 +248,6 @@ blockquote {
   outline: none;
 }
 
-#modal-close:focus {
-  outline: none;
-}
-
 /* Footer */
 .footer {
   background: var(--bg-dark);
@@ -268,7 +279,7 @@ blockquote {
   margin-left: auto;
 }
 
-/* Back to Top */
+/* Back to Top Button */
 #back-to-top {
   position: fixed;
   bottom: 110px;
